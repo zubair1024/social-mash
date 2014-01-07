@@ -11,8 +11,30 @@
   
 ?>
 <html>
-  <head></head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+		<title>SOCIAL-MASH</title>
+	</head>
   <body>
+
+<header style="box-shadow: 0px 0px 30px 30px #000;" align="center">
+
+<h1 align="center" style="font-family: 'Nova Square', cursive;">SOCIAL-MASH</h1>
+<nav align="center" style="font-family: 'Nova Square', cursive;">
+  <a href="">Button 1</a> |
+  <a href="">Button 2</a> |
+  <a href="">Button 3</a> |
+  <a href="">Button 4</a> |
+  <a href="">Button 5</a>
+</nav>
+</header>
+
+
+<div class="container"style="padding: 0px 0px 700px 0px;color:#000;font-family: 'Nova Square', cursive; ">
+<br><br><br>
+<div style="padding: 10px;">
+
 
   <?php
   $user_id = $facebook->getUser();
@@ -56,6 +78,17 @@
     }
 
   ?>
+</div>
+</div>
 
+  <footer style="box-shadow: 0px 0px 10px 10px #000;"><nav align="center" style="font-family: 'Nova Square', cursive;">
+  <a href="">Button 1</a> |
+  <a href="">Button 2</a> |
+  <a href="">Button 3</a> |
+  <a href="">Button 4</a> |
+  <a href="">Button 5</a>
+</nav><h3 align="center" style="font-family: 'Nova Square', cursive;">Created by Your TATA</h3>
+  </footer>
+  
   </body>
 </html>
