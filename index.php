@@ -61,16 +61,16 @@
 		
 		$user_movies = $facebook->api('/me?fields=movies');
 	
-		 foreach ($user_movies['data'] as $key => $value) 
-		 {
+		// foreach ($user_movies['data'] as $key => $value) 
+		 //{
 		 		echo "<ul>";
-		 	foreach ($value['movies']['data'] as $moviekey => $movievalue) 
+		 	foreach ($user_movies['movies']['data'] as $moviekey => $movievalue) 
 		 	{
 				echo '<li>',$movievalue['name'],'</li>';
 				
 			}
 			echo "</ul>";
-		 }
+		 //}
 		
 		/*if ($user_graph1['likes']):
 			echo '<h2 style="color:#000;">Favorite Movies</h2>';
