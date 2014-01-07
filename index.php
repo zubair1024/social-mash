@@ -61,7 +61,7 @@
 		
 		$user_movies = $facebook->api('/me?fields=movies');
 		echo 'here';
-		 foreach ($movies_graph['data'] as $key => $value) 
+		 foreach ($user_movies['data'] as $key => $value) 
 		 {
 		 		echo "<ul>";
 		 	foreach ($value['movies']['data'] as $moviekey => $movievalue) 
