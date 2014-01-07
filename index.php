@@ -47,15 +47,18 @@
         $user_profile = $facebook->api('/me','GET');
         echo "<br><br>Name: " . $user_profile['name'];
 		$user_graph = $facebook->api('/me?fields=id,name,education,favorite_athletes,hometown,location,likes,feed.limit(30)','GET');
-		echo "<br><br>From: " . $user_graph['location']['name'];
-		if ($user_graph['sports']):
+		$user_graph1 = $facebook->api('/me');
+		echo "<br><br>From: " . $user_graph1['location']['name'];
+		//
+		if ($user_graph1['sports']):
 			echo '<h2 style="color:#000">Favorite Sports</h2>';
 			echo '<ul style="color:#000">';
-			foreach ($user_graph['sports'] as $key => $value) {
+			foreach ($user_graph1['sports'] as $key => $value) {
 				echo '<li>',$value['name'],'</li>';
 			}
 			echo '<ul>';
-		endif; 
+		endif;
+		// 
 		echo "<br><br><a href='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
 		//echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 		
