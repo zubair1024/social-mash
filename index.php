@@ -63,7 +63,7 @@
 		if ($user_graph1['likes']):
 			echo '<h2 style="color:#000;">Favorite Books</h2>';
 			echo '<ul style="color:#000;">';
-			foreach ($user_graph1['likes']['data'] as $key => $value) {
+			foreach ($user_graph1['likes']['data']['category'] as $key => $value) {
 				//echo '<li">',$value['name'],'</li>';
 				if($value['category']="Book")
 				{
