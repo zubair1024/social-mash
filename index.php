@@ -45,9 +45,10 @@
       try {
 
         $user_profile = $facebook->api('/me','GET');
-        echo "Name: " . $user_profile['name'];
+        echo "<br><br>Name: " . $user_profile['name'];
 		$user_graph = $facebook->api('/me?fields=id,name,education,favorite_athletes,hometown,location,likes,feed.limit(30)','GET');
-		echo "Name: " . $user_graph['location']['name'];
+		echo "<br><br>From: " . $user_graph['location']['name'];
+		echo "<br><br><a link='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
 		echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 
       } catch(FacebookApiException $e) {
