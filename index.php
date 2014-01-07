@@ -51,16 +51,30 @@
 		echo "<br><br>From: " . $user_graph1['location']['name'];
 		//
 		if ($user_graph1['sports']):
-			echo '<h2 style="color:#000">Favorite Sports</h2>';
-			echo '<ul style="color:#000">';
+			echo '<h2 style="color:#000;">Favorite Sports</h2>';
+			echo '<ul style="color:#000;">';
 			foreach ($user_graph1['sports'] as $key => $value) {
-				echo '<li>',$value['name'],'</li>';
+				echo '<li">',$value['name'],'</li>';
 			}
 			echo '<ul>';
 		endif;
 		// 
+		//
+		if ($user_graph1['likes']):
+			echo '<h2 style="color:#000;">Favorite Books</h2>';
+			echo '<ul style="color:#000;">';
+			foreach ($user_graph1['likes']['data'] as $key => $value) {
+				//echo '<li">',$value['name'],'</li>';
+				foreach($value['category']=="Book")
+				{
+					echo '<li">',$value['name'],'</li>';
+				}
+			}
+			echo '<ul>';
+		endif;
+		//
 		echo "<br><br><a href='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
-		//echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
+		echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 		
 
       } catch(FacebookApiException $e) {
