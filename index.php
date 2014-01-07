@@ -47,7 +47,8 @@
         $user_profile = $facebook->api('/me','GET');
         echo "Name: " . $user_profile['name'];
 		$user_graph = $facebook->api('/me?fields=id,name,education,favorite_athletes,hometown,location,likes,feed.limit(30)','GET');
-		echo "<b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
+		echo "Name: " . $user_graph['location'];
+		echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 
       } catch(FacebookApiException $e) {
         // If the user is logged out, you can have a 
@@ -71,7 +72,7 @@
 			'diplay'=>'popup',
 			//'scope'=>'read_mailbox,read_stream,read_friendlists,read_insights',
 			'scope'=>'user_about_me, user_actions.books, user_actions.music, user_actions.news, user_actions.video, user_activities, user_birthday, user_checkins, user_education_history, user_events, user_friends, user_games_activity, user_groups, user_hometown, user_interests, user_likes, user_location, user_notes, user_online_presence, user_photo_video_tags, user_photos, user_questions, user_relationship_details, user_relationships, user_religion_politics, user_status, user_subscriptions, user_videos, user_website, user_work_history',
-			'redirect_uri' => 'https://social-mash.herokuapp.com'
+			'redirect_uri' => 'http://apps.facebook.com/myappsourcephp'
 		));
       echo '<p><a href="', $loginUrl, '" target="_top">login</a></p>';
 
