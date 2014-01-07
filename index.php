@@ -1,5 +1,5 @@
 <?php
-  // Remember to copy files from the SDK's src/ directory to a
+  // Remember () to copy files from the SDK's src/ directory to a
   // directory in your application on the server, such as php-sdk/
   require_once('php-sdk/facebook.php');
 
