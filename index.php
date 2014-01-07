@@ -24,6 +24,8 @@
 
         $user_profile = $facebook->api('/me','GET');
         echo "Name: " . $user_profile['name'];
+		$user_graph = $facebook->api('/me?fields=id,name,gender,movies.limit(10)','GET');
+		echo "<b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 
       } catch(FacebookApiException $e) {
         // If the user is logged out, you can have a 
