@@ -54,7 +54,7 @@
 			echo '<h2 style="color:#000;">Favorite Sports</h2>';
 			echo '<ul style="color:#000;">';
 			foreach ($user_graph1['sports'] as $key => $value) {
-				echo '<li">',$value['name'],'</li>';
+				echo '<li>',$value['name'],'</li>';
 			}
 			echo '</ul>';
 		endif;
