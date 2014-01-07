@@ -46,7 +46,7 @@
 
         $user_profile = $facebook->api('/me','GET');
         echo "<br><br>Name: " . $user_profile['name'];
-		$user_graph = $facebook->api('/me?fields=id,name,education,favorite_athletes,hometown,location,likes,feed.limit(30)','GET');
+		//$user_graph = $facebook->api('/me?fields=id,name,education,favorite_athletes,hometown,location,likes,feed.limit(30)','GET');
 		$user_graph1 = $facebook->api('/me');
 		echo "<br><br>From: " . $user_graph1['location']['name'];
 		//
@@ -58,9 +58,20 @@
 			}
 			echo '</ul>';
 		endif;
-		// 
-		//
-		if ($user_graph1['likes']):
+		
+		$user_movies = $facebook->api('/me?fields=movies');
+		 foreach ($movies_graph['data'] as $key => $value) 
+		 {
+		 		echo "<ul>";
+		 	foreach ($value['movies']['data'] as $moviekey => $movievalue) 
+		 	{
+				echo '<li">',$movievalue['name'],'</li>';
+				
+			}
+			echo "</ul>";
+		 }
+		
+		/*if ($user_graph1['likes']):
 			echo '<h2 style="color:#000;">Favorite Movies</h2>';
 			echo '<ul style="color:#000;">';
 			foreach ($user_graph1['likes']['data'] as $key => $value) 
@@ -69,8 +80,10 @@
 			}
 			echo '</ul>';
 		endif;
-		//
-		echo "<br><br><a href='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
+	
+		*/
+		
+		//echo "<br><br><a href='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
 		//echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 		
 
