@@ -56,21 +56,20 @@
 			foreach ($user_graph1['sports'] as $key => $value) {
 				echo '<li">',$value['name'],'</li>';
 			}
-			echo '<ul>';
+			echo '</ul>';
 		endif;
 		// 
 		//
 		if ($user_graph1['likes']):
-			echo '<h2 style="color:#000;">Favorite Books</h2>';
+			echo '<h2 style="color:#000;">Favorite Movies</h2>';
 			echo '<ul style="color:#000;">';
-			foreach ($user_graph1['likes']['data']['category'] as $key => $value) {
-				//echo '<li">',$value['name'],'</li>';
-				if($value['category']="Book")
+			foreach ($user_graph1['likes']['data'] as $key => $value) {
+				if($value['category']="Movie")
 				{
 					echo '<li">',$value['name'],'</li>';
 				}
 			}
-			echo '<ul>';
+			echo '</ul>';
 		endif;
 		//
 		echo "<br><br><a href='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
