@@ -60,7 +60,7 @@
 		endif;
 		
 		$user_movies = $facebook->api('/me?fields=movies');
-		echo 'here';
+	
 		 foreach ($user_movies['data'] as $key => $value) 
 		 {
 		 		echo "<ul>";
