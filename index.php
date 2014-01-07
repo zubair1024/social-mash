@@ -65,7 +65,7 @@
 			echo '<ul style="color:#000;">';
 			foreach ($user_graph1['likes']['data'] as $key => $value) {
 				//echo '<li">',$value['name'],'</li>';
-				foreach($value['category']=="Book")
+				if($value['category']="Book")
 				{
 					echo '<li">',$value['name'],'</li>';
 				}
