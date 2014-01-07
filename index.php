@@ -66,7 +66,7 @@
 		 		echo "<ul>";
 		 	foreach ($value['movies']['data'] as $moviekey => $movievalue) 
 		 	{
-				echo '<li">',$movievalue['name'],'</li>';
+				echo '<li>',$movievalue['name'],'</li>';
 				
 			}
 			echo "</ul>";
