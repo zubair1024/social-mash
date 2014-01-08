@@ -83,7 +83,7 @@
 			}
 			echo "</ul>";
 			//Movies
-			echo '<br><br><h3 style="color:#000;">Favorite Books</h3><ul>';	
+			echo '<br><br><h3 style="color:#000;">Favorite Movies</h3><ul>';	
 		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
 		 	{
 				//echo '<li>',$likevalue['name'],'</li>';
@@ -99,6 +99,39 @@
 		 	{
 				//echo '<li>',$likevalue['name'],'</li>';
 				if ($likevalue['category']=="Tv show")
+				{	
+					echo '<li>',$likevalue['name'],'</li>';	
+				}
+			}
+			echo "</ul>";
+			//Sports Teams
+			echo '<br><br><h3 style="color:#000;">Favorite Sports Teams</h3><ul>';	
+		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
+		 	{
+				//echo '<li>',$likevalue['name'],'</li>';
+				if ($likevalue['category']=="Professional sports team")
+				{	
+					echo '<li>',$likevalue['name'],'</li>';	
+				}
+			}
+			echo "</ul>";
+			//Sports
+			echo '<br><br><h3 style="color:#000;">Favorite Sports</h3><ul>';	
+		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
+		 	{
+				//echo '<li>',$likevalue['name'],'</li>';
+				if ($likevalue['category']=="Sport")
+				{	
+					echo '<li>',$likevalue['name'],'</li>';	
+				}
+			}
+			echo "</ul>";
+			//Interest
+			echo '<br><br><h3 style="color:#000;">Interests</h3><ul>';	
+		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
+		 	{
+				//echo '<li>',$likevalue['name'],'</li>';
+				if ($likevalue['category']=="Interest")
 				{	
 					echo '<li>',$likevalue['name'],'</li>';	
 				}
