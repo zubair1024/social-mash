@@ -51,7 +51,7 @@
 		echo "<br><br>From: " . $user_graph1['location']['name'];
 		//
 		if ($user_graph1['sports']):
-			echo '<h2 style="color:#000;">Favorite Sports</h2>';
+			echo '<h3 style="color:#000;">Favorite Sports</h3>';
 			echo '<ul style="color:#000;">';
 			foreach ($user_graph1['sports'] as $key => $value) {
 				echo '<li>',$value['name'],'</li>';
@@ -71,15 +71,37 @@
 			
 			//Getting the user's likes
 			$user_likes = $facebook->api('/me?fields=likes');
-		 		echo "<ul>";
+			//Books
+			echo '<br><br><h3 style="color:#000;">Favorite Books</h3><ul>';	
 		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
 		 	{
 				//echo '<li>',$likevalue['name'],'</li>';
 				if ($likevalue['category']=="Book")
-				{
+				{	
 					echo '<li>',$likevalue['name'],'</li>';	
 				}
-				
+			}
+			echo "</ul>";
+			//Movies
+			echo '<br><br><h3 style="color:#000;">Favorite Books</h3><ul>';	
+		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
+		 	{
+				//echo '<li>',$likevalue['name'],'</li>';
+				if ($likevalue['category']=="Movie")
+				{	
+					echo '<li>',$likevalue['name'],'</li>';	
+				}
+			}
+			echo "</ul>";
+			//TV Shows
+			echo '<br><br><h3 style="color:#000;">Favorite TV Shows</h3><ul>';	
+		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
+		 	{
+				//echo '<li>',$likevalue['name'],'</li>';
+				if ($likevalue['category']=="Tv show")
+				{	
+					echo '<li>',$likevalue['name'],'</li>';	
+				}
 			}
 			echo "</ul>";
 			
