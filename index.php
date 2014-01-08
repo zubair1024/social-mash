@@ -61,8 +61,6 @@
 		
 		$user_movies = $facebook->api('/me?fields=movies');
 	
-		// foreach ($user_movies['data'] as $key => $value) 
-		 //{
 		 		echo "<ul>";
 		 	foreach ($user_movies['movies']['data'] as $moviekey => $movievalue) 
 		 	{
@@ -71,18 +69,21 @@
 			}
 			echo "</ul>";
 			
-			
+			//Getting the user's likes
 			$user_likes = $facebook->api('/me?fields=likes');
-	
-		// foreach ($user_movies['data'] as $key => $value) 
-		 //{
 		 		echo "<ul>";
 		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
 		 	{
-				echo '<li>',$likevalue['name'],'</li>';
+				//echo '<li>',$likevalue['name'],'</li>';
+				if ($likevalue['category']=="Book")
+				{
+					echo '<li>',$likevalue['name'],'</li>';	
+				}
 				
 			}
 			echo "</ul>";
+			
+			
 			
 			
 		 //}
