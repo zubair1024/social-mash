@@ -70,6 +70,21 @@
 				
 			}
 			echo "</ul>";
+			
+			
+			$user_likes = $facebook->api('/me?fields=likes');
+	
+		// foreach ($user_movies['data'] as $key => $value) 
+		 //{
+		 		echo "<ul>";
+		 	foreach ($user_likes['likes']['data'] as $likekey => $likevalue) 
+		 	{
+				echo '<li>',$likevalue['name'],'</li>';
+				
+			}
+			echo "</ul>";
+			
+			
 		 //}
 		
 		/*if ($user_graph1['likes']):
