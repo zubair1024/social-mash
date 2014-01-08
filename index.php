@@ -101,7 +101,7 @@
 		*/
 		
 		//echo "<br><br><a href='",$user_graph['likes']['paging']['next'],"'>NEXT</a><br><br>";
-		//echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
+		echo "<br><br><b>DATA:<b><br><br><br><pre>",print_r($user_graph),"</pre>";
 		
 
       } catch(FacebookApiException $e) {
