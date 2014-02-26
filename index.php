@@ -168,7 +168,7 @@
 			'diplay'=>'popup',
 			'scope'=>'email',
 			'redirect_uri' => 'https://social-mash.herokuapp.com'
-			//'redirect_uri' => 'http://apps.facebook.com/myappsourcephp'
+			
 		));
         echo '<p><a href="', $loginUrl, '" target="_top">login</a></p>';
         error_log($e->getType());
