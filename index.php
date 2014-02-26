@@ -14,6 +14,8 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="css.css">
 		<link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/foundation.css" />
+    	<script src="js/vendor/modernizr.js"></script>
 		<title>SOCIAL-MASH</title>
 	</head>
   <body>
@@ -22,11 +24,11 @@
 
 <h1 align="center" style="font-family: 'Nova Square', cursive;">SOCIAL-MASH</h1>
 <nav align="center" style="font-family: 'Nova Square', cursive;">
-  <a href="">Button 1</a> |
-  <a href="">Button 2</a> |
-  <a href="">Button 3</a> |
-  <a href="">Button 4</a> |
-  <a href="">Button 5</a>
+  <a href="" class="small round button">Button 1</a> |
+  <a href="" class="small round button">Button 2</a> |
+  <a href="" class="small round button">Button 3</a> |
+  <a href="" class="small round button">Button 4</a> |
+  <a href="" class="small round button">Button 5</a>
 </nav>
 </header>
 
@@ -190,6 +192,14 @@
   ?>
 </div>
 </div>
+
+<!--For Foundation S-->
+<script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+<!--For Foundation E-->
 
   <footer style="box-shadow: 0px 0px 10px 10px #000;"><nav align="center" style="font-family: 'Nova Square', cursive;">
   <a href="">Button 1</a> |
