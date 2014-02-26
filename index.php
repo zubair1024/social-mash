@@ -38,7 +38,7 @@
 	
 	<ul class="example-orbit" data-orbit>
   <li>
-    <img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" />
+    <img src=".img/orbit_1.jpg" alt="slide 1" />
     <div class="orbit-caption">
       Caption One.
     </div>
